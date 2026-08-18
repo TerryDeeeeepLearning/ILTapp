@@ -1,0 +1,163 @@
+[
+  {
+    "id": "sd-001", "accent": "en-GB", "section": 1, "difficulty": 2, "topic": "住宿詢問",
+    "text": "The deposit is two hundred and fifty pounds, and that's refundable at the end of the tenancy.",
+    "gaps": [
+      { "answer": "250", "surface": "two hundred and fifty", "maxWords": 1, "numeric": true, "tags": ["number-money"] },
+      { "answer": "refundable", "surface": "refundable", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-002", "accent": "en-GB", "section": 1, "difficulty": 3, "topic": "報名表單",
+    "text": "My surname is Whitfield — that's W-H-I-T-F-I-E-L-D — and you can reach me on oh seven double four, eight two three, one one nine.",
+    "gaps": [
+      { "answer": "Whitfield", "surface": "Whitfield", "maxWords": 1, "tags": ["spelling-name"] },
+      { "answer": "0744823119", "surface": "oh seven double four, eight two three, one one nine", "maxWords": 1, "numeric": true, "tags": ["number-phone"] }
+    ]
+  },
+  {
+    "id": "sd-003", "accent": "en-AU", "section": 1, "difficulty": 3, "topic": "課程異動",
+    "text": "The workshop's on Tuesday — sorry, no, they moved it to Wednesday afternoon last week.",
+    "gaps": [
+      { "answer": "Wednesday", "surface": "Wednesday", "maxWords": 1, "tags": ["self-correction", "number-date"] },
+      { "answer": "afternoon", "surface": "afternoon", "tags": ["connected-speech"] }
+    ],
+    "traps": [{ "decoy": "Tuesday", "correct": "Wednesday", "atSecond": 1.4 }]
+  },
+  {
+    "id": "sd-004", "accent": "en-AU", "section": 2, "difficulty": 3, "topic": "館內導覽",
+    "text": "If you head past the gift shop, the reading room's directly opposite the main staircase.",
+    "gaps": [
+      { "answer": "opposite", "surface": "opposite", "tags": ["paraphrase"] },
+      { "answer": "staircase", "surface": "staircase", "tags": ["connected-speech"] }
+    ]
+  },
+  {
+    "id": "sd-005", "accent": "en-US", "section": 2, "difficulty": 2, "topic": "健身中心",
+    "text": "Members can book a court up to forty-eight hours in advance, but no more than twice a week.",
+    "gaps": [
+      { "answer": "48", "surface": "forty-eight", "maxWords": 1, "numeric": true, "tags": ["number-general"] },
+      { "answer": "in advance", "surface": "in advance", "maxWords": 2, "tags": ["paraphrase"] }
+    ]
+  },
+  {
+    "id": "sd-006", "accent": "en-GB", "section": 3, "difficulty": 4, "topic": "論文指導",
+    "text": "What I'd suggest is that you cut down on the background section and expand the methodology instead.",
+    "gaps": [
+      { "answer": "cut down on", "surface": "cut down on", "maxWords": 3, "tags": ["paraphrase"] },
+      { "answer": "methodology", "surface": "methodology", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-007", "accent": "en-CA", "section": 3, "difficulty": 4, "topic": "小組分工",
+    "text": "Honestly, I thought we'd struggle with the fieldwork, but in the end the data collection went pretty smoothly.",
+    "gaps": [
+      { "answer": "fieldwork", "surface": "fieldwork", "tags": ["academic-vocab"] },
+      { "answer": "data collection", "surface": "data collection", "maxWords": 2, "tags": ["paraphrase"] }
+    ]
+  },
+  {
+    "id": "sd-008", "accent": "en-GB", "section": 4, "difficulty": 5, "topic": "都市規劃講座",
+    "text": "Crucially, the second phase of the scheme relies on funding that hasn't yet been approved by the council.",
+    "gaps": [
+      { "answer": "Crucially", "surface": "Crucially", "maxWords": 1, "tags": ["signposting"] },
+      { "answer": "funding", "surface": "funding", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-009", "accent": "en-NZ", "section": 4, "difficulty": 4, "topic": "海洋生物講座",
+    "text": "These colonies decline sharply once the water temperature rises above twenty-six degrees.",
+    "gaps": [
+      { "answer": "colonies", "surface": "colonies", "tags": ["academic-vocab"] },
+      { "answer": "26", "surface": "twenty-six", "maxWords": 1, "numeric": true, "tags": ["number-general"] }
+    ]
+  },
+  {
+    "id": "sd-010", "accent": "en-US", "section": 1, "difficulty": 2, "topic": "預約時段",
+    "text": "We've got an opening on the third of March, or the fifteenth if you'd rather wait.",
+    "gaps": [
+      { "answer": "3 March", "surface": "third of March", "maxWords": 2, "numeric": true, "tags": ["number-date"] },
+      { "answer": "15", "surface": "fifteenth", "maxWords": 1, "numeric": true, "tags": ["number-date"] }
+    ]
+  },
+  {
+    "id": "sd-011", "accent": "en-AU", "section": 2, "difficulty": 3, "topic": "社團說明",
+    "text": "You'll find us at forty-two Mount Pleasant Road, just around the corner from the car-park.",
+    "gaps": [
+      { "answer": "42 Mount Pleasant Road", "surface": "forty-two Mount Pleasant Road", "maxWords": 4, "numeric": true, "tags": ["address"] },
+      { "answer": "car-park", "surface": "car-park", "maxWords": 1, "tags": ["connected-speech"] }
+    ]
+  },
+  {
+    "id": "sd-012", "accent": "en-GB", "section": 3, "difficulty": 5, "topic": "實驗設計",
+    "text": "We didn't reject the hypothesis outright; rather, we found the effect was far weaker than reported.",
+    "gaps": [
+      { "answer": "hypothesis", "surface": "hypothesis", "tags": ["academic-vocab"] },
+      { "answer": "weaker", "surface": "weaker", "tags": ["paraphrase", "distractor"] }
+    ]
+  },
+  {
+    "id": "sd-013", "accent": "en-GB", "section": 4, "difficulty": 4, "topic": "建築史講座",
+    "text": "To sum up, the restoration relied heavily on locally quarried stone rather than imported marble.",
+    "gaps": [
+      { "answer": "To sum up", "surface": "To sum up", "maxWords": 3, "tags": ["signposting"] },
+      { "answer": "quarried", "surface": "quarried", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-014", "accent": "en-US", "section": 3, "difficulty": 3, "topic": "問卷設計",
+    "text": "I'd rather we split the questionnaire into two shorter sections, otherwise people lose patience halfway through.",
+    "gaps": [
+      { "answer": "questionnaire", "surface": "questionnaire", "tags": ["academic-vocab"] },
+      { "answer": "lose patience", "surface": "lose patience", "maxWords": 2, "tags": ["paraphrase"] }
+    ]
+  },
+  {
+    "id": "sd-015", "accent": "en-GB", "section": 1, "difficulty": 2, "topic": "圖書館規定",
+    "text": "You can renew the book online, but overdue items carry a fine of thirty pence a day.",
+    "gaps": [
+      { "answer": "renew", "surface": "renew", "tags": ["paraphrase"] },
+      { "answer": "30 pence", "surface": "thirty pence", "maxWords": 2, "numeric": true, "tags": ["number-money"] }
+    ]
+  },
+  {
+    "id": "sd-016", "accent": "en-AU", "section": 4, "difficulty": 5, "topic": "環境科學講座",
+    "text": "Ironically, the drainage scheme intended to prevent flooding actually accelerated erosion downstream.",
+    "gaps": [
+      { "answer": "drainage", "surface": "drainage", "tags": ["academic-vocab"] },
+      { "answer": "erosion", "surface": "erosion", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-017", "accent": "en-GB", "section": 2, "difficulty": 3, "topic": "展覽資訊",
+    "text": "The exhibition runs until the end of August, though the sculpture wing closes an hour earlier.",
+    "gaps": [
+      { "answer": "August", "surface": "August", "maxWords": 1, "tags": ["number-date"] },
+      { "answer": "an hour earlier", "surface": "an hour earlier", "maxWords": 3, "tags": ["paraphrase"] }
+    ]
+  },
+  {
+    "id": "sd-018", "accent": "en-CA", "section": 2, "difficulty": 2, "topic": "票務說明",
+    "text": "Tickets are half price for students, provided you bring photo identification.",
+    "gaps": [
+      { "answer": "half price", "surface": "half price", "maxWords": 2, "tags": ["paraphrase"] },
+      { "answer": "identification", "surface": "identification", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-019", "accent": "en-NZ", "section": 3, "difficulty": 4, "topic": "進度檢討",
+    "text": "We hadn't anticipated the delay, so the whole timetable had to be revised.",
+    "gaps": [
+      { "answer": "anticipated", "surface": "anticipated", "tags": ["paraphrase"] },
+      { "answer": "revised", "surface": "revised", "tags": ["academic-vocab"] }
+    ]
+  },
+  {
+    "id": "sd-020", "accent": "en-US", "section": 4, "difficulty": 5, "topic": "心理學講座",
+    "text": "Participants who slept fewer than six hours performed significantly worse on the memory task.",
+    "gaps": [
+      { "answer": "6", "surface": "six", "maxWords": 1, "numeric": true, "tags": ["number-general"] },
+      { "answer": "memory task", "surface": "memory task", "maxWords": 2, "tags": ["academic-vocab"] }
+    ]
+  }
+]
