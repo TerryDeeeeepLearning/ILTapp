@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # 題庫校驗 + 型別 + 測試。任何一項失敗就不部署。
+      - run: npm run validate
+      - run: npx tsc -b
+      - run: npx vitest run
+
+      # 若 repo 內尚未提交音檔，於 CI 現場生成一次。
+      # 失敗不擋部署 —— App 會自動降級為系統語音，仍可正常使用。
+      - name: Generate audio (optional)
+        if: hashFiles('public/audio/core-starter/pack.json') == ''
+        continue-on-error: true
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install edge-tts
+          npm run audio
+
+      - run: npx vite build
+
+      # 阻止 GitHub Pages 的 Jekyll 處理底線開頭的檔案
+      - run: touch dist/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
